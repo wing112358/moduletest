@@ -23,6 +23,4 @@ class TestPost():
         b=a+1
         print(b)
 
-if __name__ == '__main__':
-    pytest.main(["test_get.py"])
 
