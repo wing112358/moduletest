@@ -1,7 +1,6 @@
 import json
 import requests
 
-from config.dataconfig import datapath
 from lib.getExcel import read_Excel
 from lib.paramToSign import sign
 
@@ -26,7 +25,7 @@ class Send():
             print(res1.text)
             return res1
 
-    def sendapi(self,sheetname, casename,key):
+    def sendapi(self,datapath,sheetname, casename,key=None):
         # 从excel读取参数
         sheet = read_Excel()
         datalist = sheet.readexcel(datapath=datapath, sheetname=sheetname)

@@ -1,3 +1,6 @@
+import os,sys
+sys.path.append(os.getcwd())            #告诉pytest运行前先检索当前路径
+
 print("——————————————————开始导db——————————————————")
 from lib.publicDb import query_db
 print("——————————————————开始导traceback——————————————————")

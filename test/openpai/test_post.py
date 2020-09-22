@@ -1,6 +1,8 @@
-import unittest
+#import unittest
+import pytest
 import sys
 
+from config.dataconfig import datapath
 from dbchange.item_db import Queryitem
 
 print("路径-------")
@@ -12,10 +14,10 @@ sys.path.append("..")
 
 
 
-class TestPost(unittest.TestCase):
+class TestPost():
     def testpost_normal(self):
         sendrequest = Send()
-        result = sendrequest.sendapi(sheetname='test_read_excel', casename='test_post')
+        result = sendrequest.sendapi(datapath=datapath,sheetname='test_read_excel', casename='test_post')
         print(result)
 
         querybyname = Queryitem()
