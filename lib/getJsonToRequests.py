@@ -55,7 +55,7 @@ class Send():
             print("请求链接----" + f_dict['url'] + '\n' + "请求参数----" + json.dumps(f_dict['params']))
             res = self.getapi(url=f_dict['url'], params=f_dict['params'])
 
-            return res
+        return res
 
 
     if __name__ == '__main__':

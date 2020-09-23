@@ -243,7 +243,7 @@ function filter_table(elem) {
 }
 </script>
     <h1>test.html</h1>
-    <p>Report generated on 23-Sep-2020 at 15:17:32 by <a href="https://pypi.python.org/pypi/pytest-html">pytest-html</a> v2.1.1</p>
+    <p>Report generated on 23-Sep-2020 at 15:40:23 by <a href="https://pypi.python.org/pypi/pytest-html">pytest-html</a> v2.1.1</p>
     <h2>Environment</h2>
     <table id="environment">
       <tr>
@@ -259,7 +259,7 @@ function filter_table(elem) {
         <td>Python</td>
         <td>3.8.3</td></tr></table>
     <h2>Summary</h2>
-    <p>4 tests ran in 0.59 seconds. </p>
+    <p>4 tests ran in 0.65 seconds. </p>
     <p class="filter" hidden="true">(Un)check the boxes to filter the results.</p><input checked="true" class="filter" data-test-result="passed" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="passed">2 passed</span>, <input checked="true" class="filter" data-test-result="skipped" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="skipped">0 skipped</span>, <input checked="true" class="filter" data-test-result="failed" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="failed">2 failed</span>, <input checked="true" class="filter" data-test-result="error" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="error">0 errors</span>, <input checked="true" class="filter" data-test-result="xfailed" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="xfailed">0 expected failures</span>, <input checked="true" class="filter" data-test-result="xpassed" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="xpassed">0 unexpected passes</span>
     <h2>Results</h2>
     <table id="results-table">
@@ -275,20 +275,20 @@ function filter_table(elem) {
         <tr>
           <td class="col-result">Failed</td>
           <td class="col-name">test/openpai/test_post.py::TestPost::testpost_normal</td>
-          <td class="col-duration">0.12</td>
-          <td class="col-links"></td></tr>
-        <tr>
-          <td class="extra" colspan="4">
-            <div class="log">self = &lt;test.openpai.test_post.TestPost object at 0x000001CC35A9B520&gt;<br/><br/>    def testpost_normal(self):<br/>        sendrequest = Send()<br/>        result = sendrequest.sendapi(datapath=datapath,sheetname=&#x27;test_read_excel&#x27;, casename=&#x27;test_post&#x27;)<br/>        print(result)<br/>    <br/>        querybyname = Queryitem()<br/>        sqlresult=querybyname.querybyname(&quot;插电版车型&quot;)<br/>    <br/>&gt;       self.assertIn(result,200)<br/><span class="error">E       AttributeError: &#x27;TestPost&#x27; object has no attribute &#x27;assertIn&#x27;</span><br/><br/>test\openpai\test_post.py:26: AttributeError<br/></div></td></tr></tbody>
-      <tbody class="failed results-table-row">
-        <tr>
-          <td class="col-result">Failed</td>
-          <td class="col-name">test/openpai/test_sign.py::TestPost::testpost_normal</td>
           <td class="col-duration">0.11</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
-            <div class="log">self = &lt;test.openpai.test_sign.TestPost object at 0x000001CC35AD1190&gt;<br/><br/>    def testpost_normal(self):<br/>        sendrequest = Send()<br/>        result = sendrequest.sendapi(datapath=datapath,sheetname=&#x27;test_read_excel&#x27;, casename=&#x27;test_sign&#x27;,key=testkey)<br/>        print(result)<br/>    <br/>        querybyname = Queryitem()<br/>        sqlresult=querybyname.querybyname(&quot;插电版车型&quot;)<br/>    <br/>&gt;       self.assertIn(result,200)<br/><span class="error">E       AttributeError: &#x27;TestPost&#x27; object has no attribute &#x27;assertIn&#x27;</span><br/><br/>test\openpai\test_sign.py:27: AttributeError<br/></div></td></tr></tbody>
+            <div class="log">self = &lt;test.openpai.test_post.TestPost object at 0x0000027D8A8CDA30&gt;<br/><br/>    def testpost_normal(self):<br/>        sendrequest = Send()<br/>        result = sendrequest.sendapi(datapath=datapath,sheetname=&#x27;test_read_excel&#x27;, casename=&#x27;test_post&#x27;)<br/>        print(result)<br/>    <br/>        querybyname = Queryitem()<br/>        sqlresult=querybyname.querybyname(&quot;插电版车型&quot;)<br/>    <br/>&gt;       assert json.loads(result.text).get(&#x27;code&#x27;)==200<br/><span class="error">E       AttributeError: &#x27;NoneType&#x27; object has no attribute &#x27;text&#x27;</span><br/><br/>test\openpai\test_post.py:27: AttributeError<br/></div></td></tr></tbody>
+      <tbody class="failed results-table-row">
+        <tr>
+          <td class="col-result">Failed</td>
+          <td class="col-name">test/openpai/test_sign.py::TestPost::testpost_normal</td>
+          <td class="col-duration">0.10</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">self = &lt;test.openpai.test_sign.TestPost object at 0x0000027D8A9A93A0&gt;<br/><br/>    def testpost_normal(self):<br/>        sendrequest = Send()<br/>        result = sendrequest.sendapi(datapath=datapath,sheetname=&#x27;test_read_excel&#x27;, casename=&#x27;test_sign&#x27;,key=testkey)<br/>        print(result)<br/>    <br/>        querybyname = Queryitem()<br/>        sqlresult=querybyname.querybyname(&quot;插电版车型&quot;)<br/>    <br/>&gt;       assert json.loads(result.text).get(&#x27;code&#x27;)==200<br/><span class="error">E       AttributeError: &#x27;NoneType&#x27; object has no attribute &#x27;text&#x27;</span><br/><br/>test\openpai\test_sign.py:28: AttributeError<br/></div></td></tr></tbody>
       <tbody class="passed results-table-row">
         <tr>
           <td class="col-result">Passed</td>

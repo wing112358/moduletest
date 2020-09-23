@@ -19,7 +19,7 @@ class TestPost():
     def testpost_normal(self):
         sendrequest = Send()
         result = sendrequest.sendapi(datapath=datapath,sheetname='test_read_excel', casename='test_post')
-        print(result)
+        print(result.text)
 
         querybyname = Queryitem()
         sqlresult=querybyname.querybyname("插电版车型")
