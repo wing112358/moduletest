@@ -5,6 +5,7 @@ import sys
 from config.dataconfig import datapath
 from config.keyconfig import testkey
 from dbchange.item_db import Queryitem
+import json
 
 print("路径-------")
 print(sys.path)
@@ -24,6 +25,6 @@ class TestPost():
         querybyname = Queryitem()
         sqlresult=querybyname.querybyname("插电版车型")
 
-        self.assertIn(result,200)
+        assert json.loads(result.text).get('code')==200
 
 

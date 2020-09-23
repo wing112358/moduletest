@@ -1,6 +1,7 @@
 #import unittest
 import pytest
 import sys
+import json
 
 from config.dataconfig import datapath
 from dbchange.item_db import Queryitem
@@ -23,4 +24,4 @@ class TestPost():
         querybyname = Queryitem()
         sqlresult=querybyname.querybyname("插电版车型")
 
-        self.assertIn(result,200)
+        assert json.loads(result.text).get('code')==200
